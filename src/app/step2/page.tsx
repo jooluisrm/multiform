@@ -41,8 +41,8 @@ const Step2 = () => {
                 </div>
                 <div>
                     <div className="flex flex-col gap-5">
-                        <OptNivel emoji="🥳" h3="Sou Iniciante" p="Comecei a programar há menos de 2 anos." />
-                        <OptNivel emoji="😎" h3="Sou Programador" p="Já programo há 2 anos ou mais." />
+                        <OptNivel emoji="🥳" h3="Sou Iniciante" p="Comecei a programar há menos de 2 anos." level={0}/>
+                        <OptNivel emoji="😎" h3="Sou Programador" p="Já programo há 2 anos ou mais." level={1}/>
                     </div>
                     <div className="mt-5">
                         <Button2 text="Voltar" />

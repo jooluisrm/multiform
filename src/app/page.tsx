@@ -22,6 +22,8 @@ const Page = () => {
         router.push('/step3');
     };
 
+    
+
     return (
         <div className="flex justify-center">
             <div className=" pl-20 border-r border-gray-700 flex flex-col gap-10 py-10">
