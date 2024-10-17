@@ -3,7 +3,9 @@
 import { Button } from "@/components/Buttons/Button";
 import { InfoQuestoes } from "@/components/InfoQuestoes/infoQuestoes";
 import { Input } from "@/components/Input/Input";
+import { InfoContext } from "@/context/InfContext";
 import { useRouter } from "next/navigation";
+import { useContext } from "react";
 import { GrContact } from "react-icons/gr";
 import { IoPerson } from "react-icons/io5";
 import { LuScrollText } from "react-icons/lu";
@@ -16,13 +18,16 @@ const Page = () => {
         router.push('/');
     };
     const navigateToStep2 = () => {
+        if (ctx?.name.trim() === '') return alert("Preencha o seu nome para continuar!");
         router.push('/step2');
     };
     const navigateToStep3 = () => {
+        if (ctx?.name.trim() === '') return alert("Preencha o seu nome para continuar!");
         router.push('/step3');
     };
 
-    
+
+    const ctx = useContext(InfoContext);
 
     return (
         <div className="flex justify-center">
@@ -39,7 +44,7 @@ const Page = () => {
                     <p className="text-gray-300">Preencha o campo abaixo com seu nome completo</p>
                 </div>
                 <div>
-                    <Input label="Seu nome Completo" typeInput="text" id="name" />
+                    <Input label="Seu nome Completo" typeInput="text" id="name" value={ctx?.name} onChange={ctx?.setName}/>
                     <div className="mt-5">
                         <Button text="Próximo" />
                     </div>

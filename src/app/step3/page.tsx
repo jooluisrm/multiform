@@ -4,13 +4,16 @@ import { Button } from "@/components/Buttons/Button";
 import { Button2 } from "@/components/Buttons/Button2";
 import { InfoQuestoes } from "@/components/InfoQuestoes/infoQuestoes";
 import { Input } from "@/components/Input/Input";
+import { InfoContext } from "@/context/InfContext";
 import { useRouter } from "next/navigation";
+import { useContext } from "react";
 import { GrContact } from "react-icons/gr";
 import { IoPerson } from "react-icons/io5";
 import { LuScrollText } from "react-icons/lu";
 
 const Step3 = () => {
 
+    const ctx = useContext(InfoContext);
 
     const router = useRouter();
 
@@ -18,9 +21,11 @@ const Step3 = () => {
         router.push('/');
     };
     const navigateToStep2 = () => {
+        if (ctx?.name.trim() === '') return alert("Preencha o seu nome para continuar!");
         router.push('/step2');
     };
     const navigateToStep3 = () => {
+        if (ctx?.name.trim() === '') return alert("Preencha o seu nome para continuar!");
         router.push('/step3');
     };
 
@@ -35,7 +40,7 @@ const Step3 = () => {
             <div className="py-10 pl-10 flex-1">
                 <div className="mb-10 pb-5 border-b border-gray-700">
                     <p className="text-gray-300 mb-2">Passo 3/3</p>
-                    <h2 className="text-2xl font-bold my-2">Legal [NOME], onde te achamos?</h2>
+                    <h2 className="text-2xl font-bold my-2">Legal {ctx?.name}, onde te achamos?</h2>
                     <p className="text-gray-300">
                         Preencha com seus contatos para conseguirmos entrar em contato.
                     </p>
