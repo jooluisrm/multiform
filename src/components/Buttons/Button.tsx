@@ -2,7 +2,7 @@
 
 type Props = {
     text: string;
-    onClick: any;
+    onClick: () => void;
 }
 
 export const Button = ({ text, onClick }: Props) => {

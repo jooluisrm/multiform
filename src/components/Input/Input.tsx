@@ -3,7 +3,7 @@ type Props = {
     typeInput: string;
     id: string;
     value?: string;
-    onChange?: any
+    onChange?: any;
 }
 
 export const Input = ({ id, label, typeInput, value, onChange }: Props) => {
