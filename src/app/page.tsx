@@ -1,5 +1,6 @@
-import { Button } from "@/components/Button/Button";
+import { Button } from "@/components/Buttons/Button";
 import { InfoQuestoes } from "@/components/InfoQuestoes/infoQuestoes";
+import { Input } from "@/components/Input/Input";
 import { GrContact } from "react-icons/gr";
 import { IoPerson } from "react-icons/io5";
 import { LuScrollText } from "react-icons/lu";
@@ -20,13 +21,7 @@ const Page = () => {
                     <p className="text-gray-300">Preencha o campo abaixo com seu nome completo</p>
                 </div>
                 <div>
-                    <label htmlFor="name" className="text-lg">Seu nome Completo</label>
-                    <input
-                        type="text"
-                        id="name"
-                        autoFocus
-                        className="inline-block bg-transparent outline-none border-2 border-[#25Cd89] rounded-lg min-w-full py-5 px-5"
-                    />
+                    <Input label="Seu nome Completo" typeInput="text" id="name"/>
                     <Button text="Próximo"/>
                 </div>
 
