@@ -9,7 +9,7 @@ type Props = {
 
 export const InfoQuestoes = ({ h3, span, color, icone }: Props) => {
     return (
-        <div className="flex items-center gap-5 ">
+        <div className="flex items-center gap-5 hover:opacity-80 cursor-pointer">
             <div className="md:w-32 text-right">
                 <h3 className="font-bold">{h3}</h3>
                 <span className="text-gray-300 text-sm">{span}</span>
