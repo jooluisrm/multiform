@@ -44,9 +44,9 @@ const Page = () => {
                     <p className="text-gray-300">Preencha o campo abaixo com seu nome completo</p>
                 </div>
                 <div>
-                    <Input label="Seu nome Completo" typeInput="text" id="name" value={ctx?.name} onChange={ctx?.setName}/>
+                    <Input label="Seu nome Completo" typeInput="text" id="name" value={ctx?.name} onChange={ctx?.setName} />
                     <div className="mt-5">
-                        <Button text="Próximo" />
+                        <Button text="Próximo" onClick={navigateToStep2} />
                     </div>
 
                 </div>
